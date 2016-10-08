@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <title>Title</title>
+    <style>
+        #qingxie-tips{
+            font-size: 17px;
+            font-weight: 800;
+            color: white;
+            background: red;
+            width: 40px;
+            text-align: center;
+            transform: rotate(-10deg);
+        }
+        #news-tip{
+            font-size: 17px;
+            font-weight: 800;
+            color: white;
+            background: greenyellow;
+            width: 70px;
+            text-align: center;
+        }
+        #news-tip2{
+            font-size: 17px;
+            font-weight: 800;
+            color: white;
+            background: orange;
+            width: 70px;
+            text-align: center;
+            margin-left: 10px;
+        }
+        .navbar-default{
+            margin-bottom: 0px;
+        }
+        #news-bgc{
+            background-color: #F4F5F5;
+        }
+        #lunbo-bgc{
+            background-color: #F4F5F5;
+        }
+        @media screen and (min-width: 768px){
+            #lunbo-bgc{
+                height: 375px;
+            }
+            .notepic-left{
+                width: 280px;
+                height: 200px;
+            }
+            .notepic-right{
+                width: 280px;
+                height: 200px;
+            }
+            #notesy-btn1{
+                display: none;
+            }
+            #notesy-btn2{
+                display: none;
+            }
+        }
+        @media screen and (min-width: 768px) and (max-width:1280px){
+            .notepic-left{
+                width: 150px;
+                height: 200px;
+            }
+            .notepic-right{
+                width: 150px;
+                height: 200px;
+            }
+        }
+        @media screen and  (max-width: 768px){
+            a:link{
+                text-decoration: none;
+            }
+            #notesy-btn1{
+                width: 100%;
+                height: 30px;
+                background-color: #5bc0de;
+                font-weight: 800;
+                font-size: 17px;
+                color: white;
+                text-align: center;
+            }
+            #notesy-btn2{
+                margin-top: 10px;
+                width: 100%;
+                height: 30px;
+                background-color: #c9302c;
+                font-weight: 800;
+                font-size: 17px;
+                color: white;
+                text-align: center;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .notepic-left{
+                width: 100px;
+                height: 100px;
+                box-shadow: -5px -5px 1px #666;
+            }
+            .notepic-right{
+                width: 100px;
+                height: 100px;
+                box-shadow: -5px -5px 1px #666;
+            }
+            .sortips{
+                width: 100px;
+                position: absolute;
+                text-align: center;
+                color: blue;
+                left:20px;
+                top: 50px;
+                z-index: 1;
+                background-color: rgba(200,255,255,0.3);
+            }
+            .sortips2{
+                width: 100px;
+                position: absolute;
+                text-align: center;
+                color:plum;
+                right:35px;
+                top: 50px;
+                z-index: 1;
+                background-color: rgba(200,255,255,0.3);
+            }
+        }
+        .jumpage{
+            width: 400px;
+            height: 70px;
+            background-color:white ;
+        }
+        .jumpage-left{
+            float: left;
+        }
+        .jumpage-right{
+           float:left;
+           margin-left: 20px;
+        }
+        .media-heading{
+            font-weight: 600;
+        }
+        .notepic-left{
+            float: left;
+            margin: 5px;
+        }
+        .notepic-right{
+            float: right;
+            margin: 5px 20px 0px 0px;
+        }
+    </style>
+</head>
+<body>
+<article>
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#wode-navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">笔记首页</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="wode-navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="index.html"><span class="glyphicon glyphicon-search"></span>搜索</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon glyphicon-plus">上传</span></a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-user">个人</span></a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<div id="lunbo-bgc" class="col-md-6 col-sm-6 col-xs-12">
+    <div id="qingxie-tips">热点</div>
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <a href="#"><img src="images/pic.jpg" alt="pic"></a>
+            </div>
+            <div class="item">
+                <a href="#"><img src="images/pic1.jpg" alt="pic1"></a>
+            </div>
+            <div class="item">
+                <a href="#"><img src="images/pic2.jpg" alt="pic2"></a>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+<div id="news-bgc" class="col-md-6 col-sm-6 col-xs-12">
+    <span id="news-tip">精选</span>
+    <ul class="media-list">
+        <li class="media">
+            <a class="media-left" href="passage1.html">
+               <div class="jumpage">
+                   <img src="images/pic04.jpg" class="jumpage-left">
+                   <div class="jumpage-right">
+                       <h4 class="media-heading">码神笔记</h4>
+                       <p>作者：<span>凉山寺三哥</span></p>
+                       <i class="glyphicon glyphicon-thumbs-up"></i><span>233</span>
+                   </div>
+               </div>
+            </a>
+        </li>
+        <li class="media">
+            <a class="media-left" href="passage1.html">
+                <div class="jumpage">
+                    <img src="images/pic05.jpg" class="jumpage-left">
+                    <div class="jumpage-right">
+                        <h4 class="media-heading">前端面试题</h4>
+                        <p>作者：<span>凉山寺三哥</span></p>
+                        <i class="glyphicon glyphicon-thumbs-up"></i><span>210</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li class="media">
+            <a class="media-left" href="passage1.html">
+                <div class="jumpage">
+                    <img src="images/pic06.jpg" class="jumpage-left">
+                    <div class="jumpage-right">
+                        <h4 class="media-heading">JS的历史</h4>
+                        <p>作者：<span>凉山寺三哥</span></p>
+                        <i class="glyphicon glyphicon-thumbs-up"></i><span>190</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li class="media">
+            <a class="media-left" href="passage1.html">
+                <div class="jumpage">
+                    <img src="images/pic04.jpg" class="jumpage-left">
+                    <div class="jumpage-right">
+                        <h4 class="media-heading">nodejs笔记</h4>
+                        <p>作者：<span>凉山寺三哥</span></p>
+                        <i class="glyphicon glyphicon-thumbs-up"></i><span>160</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+<div><span id="news-tip2">分类</span></div>
+<div class="col-md-6 col-sm-6 col-xs-12">
+    <div class="notepic-left"><a href="#"><img class="img-responsive" src="images/notesy1.jpg" alt=""><h2 class="sortips">HTML</h2></a></div>
+    <div class="notepic-right"><a href="#"><img class="img-responsive" src="images/notesy2.jpg" alt=""><h2 class="sortips2">CSS</h2></a></div>
+</div>
+<div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="notepic-left"><a href="#"><img class="img-responsive" src="images/notesy3.jpg" alt=""><h2 class="sortips">JS</h2></a></div>
+        <div class="notepic-right"><a href="#"><img class="img-responsive" src="images/notesy4.jpg" alt=""><h2 class="sortips2">Angular</h2></a></div>
+</div>
+</article>
+<footer>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+    <a href="#"><div id="notesy-btn1">更多笔记</div></a>
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+        <a href="#"><div id="notesy-btn2">返回顶部</div></a>
+    </div>
+</footer>
+<script>
+    $("#carousel-example-generic").carousel({
+        interval: 1000
+    });
+</script>
+</body>
+</html>
