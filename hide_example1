@@ -1,0 +1,74 @@
+<nav>
+        <ul>
+            <li><a href="index.html"  class="bb" onmouseover="qh(0);" onmouseout="hideNav();" id="ta_0">首页</a></li>
+            <li><a href="nyintroduct.html"  class="bb" onmouseover="qh(1);" onmouseout="hideNav();" id="ta_1">南阳概况</a></li>
+            <li><a href="javascript:;"  class="bb" onmouseover="qh(2);" id="ta_2">投资指南</a></li>
+            <li><a href="javascript:;"  class="bb" onmouseover="qh(3);" id="ta_3">招商动态</a></li>
+            <li><a href="javascript:;"  class="bb" onmouseover="qh(4);" id="ta_4">招商项目</a></li>
+            <li><a href="javascript:;"  class="bb" onmouseover="qh(5);" id="ta_5">产业园区</a></li>
+            <li><a href="qiyeserver.html"  class="bb" onmouseover="qh(6);" onmouseout="hideNav();" id="ta_6">企业服务</a></li>
+            <li><a href="qiyefengcai.html"  class="bb" onmouseover="qh(7);" onmouseout="hideNav();" id="ta_7">企业风采</a></li>
+            <li><a href="nytechan.html"  class="bb" onmouseover="qh(8);" onmouseout="hideNav();" id="ta_8">南阳特产</a></li>
+            <li><a href="nyscene.html"  class="bb" onmouseover="qh(9);" onmouseout="hideNav();" id="ta_9">南阳美景</a></li>
+            <li><a href="contactus.html"  class="bb" onmouseover="qh(10);" onmouseout="hideNav();" id="ta_10">联系我们</a></li>
+        </ul>
+    </nav>
+        <div class="sub-nav hide-nav" id="tab_0"></div>
+        <div class="sub-nav hide-nav" id="tab_1"></div>
+        <div class="sub-nav hide-nav" id="tab_2">
+            <a href="listpag.html" style="margin-right: 20px">招商引资政策</a>
+            <a href="listpag2.html">主导产业信息</a>
+        </div>
+        <div class="sub-nav hide-nav" id="tab_3">
+            <a href="listpag3.html" style="margin-right: 20px">最新招商新闻</a>
+            <a href="listpag4.html">招商简报信息</a>
+        </div>
+        <div class="sub-nav hide-nav" id="tab_4">
+            <a href="listpag5.html" style="margin-right: 20px">政府招商</a>
+            <a href="listpag6.html" style="margin-right: 20px">企业招商</a>
+            <a href="listpag7.html">园区招商</a>
+        </div>
+        <div class="sub-nav hide-nav" id="tab_5">
+            <a href="listpag8.html" style="margin-right: 20px">最新园区动态</a>
+            <a href="listpag9.html">园区概况信息</a>
+        </div>
+        <div class="sub-nav hide-nav" id="tab_6"></div>
+        <div class="sub-nav hide-nav" id="tab_7"></div>
+        <div class="sub-nav hide-nav" id="tab_8"></div>
+        <div class="sub-nav hide-nav" id="tab_9"></div>
+        <div class="sub-nav hide-nav" id="tab_10"></div>
+
+
+function g(o) {
+        return document.getElementById(o);
+    }
+    function qh(n) {
+        for(var i=0;i<=10;i++){
+            g('ta_'+i).className='bb';
+            g('ta_'+n).className='aa';
+            g('tab_'+i).className='sub-nav hide-nav';
+            g('tab_'+n).className='sub-nav show-nav';
+            g('tab_0').className='hide-nav';
+            g('tab_1').className='hide-nav';
+            g('tab_6').className='hide-nav';
+            g('tab_7').className='hide-nav';
+            g('tab_8').className='hide-nav';
+            g('tab_9').className='hide-nav';
+            g('tab_10').className='hide-nav';
+        }
+    }
+    function hideNav() {
+        g('ta_0').className='bb';
+        g('ta_1').className='bb';
+        g('ta_6').className='bb';
+        g('ta_7').className='bb';
+        g('ta_8').className='bb';
+        g('ta_9').className='bb';
+        g('ta_10').className='bb';
+    }
+    function  showPic() {
+        g('show-pic').className='show-pic2';
+    }
+    function hidePic() {
+        g('show-pic').className='show-pic1';
+    }
