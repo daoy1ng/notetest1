@@ -1,0 +1,19 @@
+<script language="javascript" type="text/javascript">
+function showTime(){ 
+  var show_day=new Array('星期一','星期二','星期三','星期四','星期五','星期六','星期日'); 
+  var time=new Date(); 
+  var year=time.getFullYear(); 
+  var month=time.getMonth(); 
+  var date=time.getDate(); 
+  var day=time.getDay(); 
+
+  
+  month=month+1;
+  month<10?month='0'+month:month; 
+  
+  var now_time=year+'年'+month+'月'+date+'日'+' '+show_day[day-1]; 
+  document.getElementById('showtime').innerHTML=now_time; 
+}
+showTime();
+
+</script> 
