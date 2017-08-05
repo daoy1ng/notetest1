@@ -19,3 +19,14 @@ ul#nav li a{display:inline-block; padding:0 20px; height:60px; line-height:60px;
               所以需要对a设置display:inline-block(既具有block的宽度高度特性又具有inline的同行特性)
               让其a随li并排继承同时对a设置宽度高度等样式生效。
 ul#nav li a:hover{background:#0095BB}/*设置鼠标滑过或悬停时变化的背景颜色*/ 
+//去除浮动
+.clearfix:after {
+    clear: both;
+    content: ".";   //你头可以改成其他任意文本如“abc”
+    display: block;
+    height: 0;      //高度为0且hidden让该文本彻底隐藏
+    visibility: hidden;
+}
+.clearfix {
+    *zoom: 1;
+}
