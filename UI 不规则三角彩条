@@ -1,1 +1,51 @@
 //Canvas
+<canvas style="overflow-x: hidden"></canvas>
+    <script>
+        document.addEventListener('touchmove',function (e) {
+            e.preventDefault()
+        })//貌似是解决手机touchmove，添加一个事件处理程序
+        var    c=document.getElementsByTagName('canvas')[0],
+                x=c.getContext('2d'),
+                pr=window.devicePixelRatio || 1,
+                w=window.innerWidth,
+                h=window.innerHeight,//窗口高度
+                f=90,//初始距离90
+                q,
+                m=Math,
+                r=0,
+                u=m.PI*2,
+                v=m.cos,
+                z=m.random
+        c.width=w*pr
+        c.height=h*pr
+        x.scale(pr,pr)
+        x.globalAlpha=0.6
+        function i() {
+            x.clearRect(0,0,w,h)
+            q=[{x:0,y:h*.7+f},{x:0,y:h*.7-f}]//设置左起第一个三角形的两个点坐标为：q0(0,h*.7+f),q1(0,h*.7-f)
+            while(q[1].x<w+f) d(q[0],q[1])//若q1.x<w+f,取三角形的第三点为
+                                            q2(q1.x+(Math.random()*2-0.25)*f,q1.y+(Math.random()*2-1.1)*f)
+                                            q2.y如果超过了窗口大小则重新取，直到满足条件为止
+        }
+        function d(i,j) {
+            x.beginPath()
+            x.moveTo(i.x,i.y)
+            x.lineTo(j.x,j.y)
+            var k=j.x+(z()*2-0.25)*f,
+                    n = y(j.y)
+            x.lineTo(k, n)
+            x.closePath()
+            r-=u/-50
+            x.fillStyle = '#'+(v(r)*127+128<<16 | v(r+u/3)*127+128<<8 | v(r+u/3*2)*127+128).toString(16)//取色算法
+            x.fill()
+            q[0] = q[1] //设置q0=q1,q1=q2,重复上述步骤
+            q[1] = {x:k,y:n}
+        }
+        function y(p){
+            var t = p + (z()*2-1.1)*f
+            return (t>h||t<0) ? y(p) : t
+        }
+        document.onclick = i
+        document.ontouchstart = i
+        i()
+    </script>
