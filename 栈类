@@ -1,0 +1,27 @@
+创建栈，一个Stack类,使用如 stack.push(11);
+function Stack(){
+    var items=[];
+    this.push=function(element){
+        items.push(element);
+    }; 添加一个或多个新元素到栈顶
+    this.pop=function(){
+        return items.pop();
+    };  数组pop方法，删除数组里面最靠后的元素
+    this.peek=function(){
+        return items[items.length-1];
+    };
+    this.isEmpty=function(){
+        return items.length==0;
+    };
+    this.size=function(){
+        return items.length;
+    };
+    this.clear=function(){
+        items=[];
+    };
+    this.print=function(){
+        console.log(items.toString());
+    };
+    把数组里面的元素 输出为一个字符串，可以用toString方法 进制转换可以用toString(2)
+}
+补充：this方法和对象的构造
