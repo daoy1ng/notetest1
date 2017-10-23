@@ -1,0 +1,25 @@
+function Queue(){
+    var item=[];
+    向队列尾部添加
+    this.enqueque=function(element){
+        items.push(element);
+    };
+
+    移除队列最前面的项，并返回该元素,删除数组第一个元素shift
+    this.dequeue=function(){
+        return items.shift();
+    };
+    返回队列的第一个元素，队列不变
+    this.front=function(){
+
+    };return items[0];
+    this.isEmpty=function(){
+        return items.length==0;
+    };
+    this.clear=function(){
+        items=[];
+    };
+    this.size=function(){
+        return items.length;
+    };
+}
