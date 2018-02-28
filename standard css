@@ -41,3 +41,30 @@ BFC http://www.cnblogs.com/xiaohuochai/p/5248536.html
 }
 2.浮动+margin调控
 3.定位
+//标题栏即nav 两边的留白的颜色和nav的颜色一致，nav固定宽度，就不会对nav造成挤压,同样底部nav也可以这样做
+//页脚固定在底部
+container
+    header/header
+    wrap
+        div
+        /div
+    /wrap
+/container
+footer/footer
+html,body{
+    height:100%;
+    margin:0;
+    padding:0; //一般html表示整个屏幕（大于等于浏览器的高度），而子元素一般继承于父元素，所以设html高度为100%
+}
+.container{
+    min-height:100%;
+    /*height: auto !important;*/
+}
+.wrap{
+    padding-bottom:60px;
+}
+.footer{
+    height:30px;
+    margin-top:-30px;
+    line-height:30px;
+}
