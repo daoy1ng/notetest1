@@ -1,0 +1,48 @@
+先设置div的宽高
+标记为mask-mark
+css
+.mask-mark{position: relative;}
+//遮罩层的文字
+.mask-mark p{
+    font-size: 16px;
+    font-weight: 800;
+    color: #fff;
+    position: absolute;
+    z-index: 100;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    margin: 0px;
+}
+.mask{
+    background-color: #000;
+    position: absolute;
+    z-index: 99;
+    top: 0px;
+    opacity: 0.4;
+}
+
+js
+$(function () {
+    $('.mask-mark').find('p').hide();
+    $('#common-options').hide();
+})
+$('.mask-mark').hover(
+    function () {
+      var mask_width=$(this).width();
+      var mask_height=$(this).height();
+
+      var _mask=$('<div></div>');
+      _mask.width(mask_width);
+      _mask.height(mask_height);
+      _mask.attr('id','mask');
+      _mask.addClass('mask');
+      _mask.appendTo(this);
+
+      $(this).find('p').show();
+    },                
+    function () {
+    $('#mask').remove();
+    $('.mask-mark').find('p').hide();})
+    }
+)
