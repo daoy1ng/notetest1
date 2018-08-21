@@ -1,7 +1,7 @@
 //多行文本换行省略（不设高度，换行会自适应；设高度，如果过高，比如超过两行的高度，则会出现省略号后面的内容）
 display:-webkit-box;
 -webkit-box-orient:vertical;
--webkit-box-clamp:3;//调整行数，这里是三行
+-webkit-line-clamp:3;//调整行数，这里是三行
 overflow:hidden;//下面两个兼容：如果没有webkit内核
 text-overflow:ellipsis;//当内容内文本溢出时显示省略标记（...）
 word-break:break-all;//粗暴断句，包括长英文单词，不留空白
