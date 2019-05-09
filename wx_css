@@ -1,0 +1,28 @@
+//row
+<view class='two-col'>
+  <view class='left'>
+    <image src='../../images/ico_recommend.png' class='icon'></image>
+    <view class='txt'>xxxx</view>
+  </view>
+  <view class='rig'>
+    <image src='../../images/ico_next.png' class='icon'></image>
+  </view>
+</view>
+
+.two-col{
+  height: 88rpx;background: #fff;width: 100%;position: relative;margin-bottom: 32rpx;
+}
+.left{
+  position: absolute;left: 40rpx;height: 60rpx;top: 14rpx;width: 300rpx;display: flex;
+  display: -webkit-flex;align-items: center;
+}
+.rig{
+  position: absolute;right: 0;height: 60rpx;top: 14rpx;width: 80rpx;display: flex;
+  display: -webkit-flex;align-items: center;
+}
+.icon{
+  width: 40rpx;height: 40rpx;display: inline-block;
+}
+.txt{
+  width: 200rpx;height: 40rpx;font-size: 30rpx;text-align: center;color: #666;display: inline-block;
+}
